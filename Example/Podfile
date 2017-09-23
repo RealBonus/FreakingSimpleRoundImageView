@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'FreakingSimpleRoundImageView_Example' do
+  pod 'FreakingSimpleRoundImageView', :path => '../'
+
+  target 'FreakingSimpleRoundImageView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
