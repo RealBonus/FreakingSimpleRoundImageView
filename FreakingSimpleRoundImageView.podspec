@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FreakingSimpleRoundImageView'
-  s.version          = '0.1.0'
-  s.summary          = 'A freakin' simple RoundImageView. With Interface Builder support.'
+  s.version          = '1.0.0'
+  s.summary          = 'A freakin simple RoundImageView. With Interface Builder support.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,9 +17,9 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = 'A freakin' simple RoundImageView. With Interface Builder support.'
+  s.description      = 'Very simple RoundImageView, with Interface Builder support. In swift. Grab it and make something neat.'
   s.homepage         = 'https://github.com/realbonus/FreakingSimpleRoundImageView'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots      = 'https://raw.githubusercontent.com/RealBonus/FreakingSimpleRoundImageView/master/Screenshots/IB.png', 'https://raw.githubusercontent.com/RealBonus/FreakingSimpleRoundImageView/master/Screenshots/Attributes.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'realbonus' => 'p.anokhov@gmail.com' }
   s.source           = { :git => 'https://github.com/realbonus/FreakingSimpleRoundImageView.git', :tag => s.version.to_s }
@@ -27,9 +27,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'FreakingSimpleRoundImageView/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'FreakingSimpleRoundImageView' => ['FreakingSimpleRoundImageView/Assets/*.png']
-  # }
 
 end

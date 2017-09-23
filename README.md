@@ -1,6 +1,6 @@
 # FreakingSimpleRoundImageView
 
-![Simple RoundImageView](https://raw.githubusercontent.com/RealBonus/FreakingSimpleRoundImageView/master/Screenshots/IB.jpeg)
+![Simple RoundImageView](https://raw.githubusercontent.com/RealBonus/FreakingSimpleRoundImageView/master/Screenshots/IB.png)
 
 [![CI Status](http://img.shields.io/travis/realbonus/FreakingSimpleRoundImageView.svg?style=flat)](https://travis-ci.org/realbonus/FreakingSimpleRoundImageView)
 [![Version](https://img.shields.io/cocoapods/v/FreakingSimpleRoundImageView.svg?style=flat)](http://cocoapods.org/pods/FreakingSimpleRoundImageView)
@@ -9,7 +9,7 @@
 
 Really, really simple round ImageView in Swift, with Interface Builder support.
 
-![Attributes inspector](https://raw.githubusercontent.com/RealBonus/FreakingSimpleRoundImageView/master/Screenshots/Attributes.jpeg)
+![Attributes inspector](https://raw.githubusercontent.com/RealBonus/FreakingSimpleRoundImageView/master/Screenshots/Attributes.png)
 
 ## Example
 
