@@ -15,6 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		8BDE40B3EF97D0EA172D0531 /* Pods_FreakingSimpleRoundImageView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEAD9881B8ACBD5F0D19E553 /* Pods_FreakingSimpleRoundImageView_Example.framework */; };
+		E98D1DF61F76C2E500F30247 /* Boba.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E98D1DF51F76BBE000F30247 /* Boba.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		C2061B735C7CB292848675E6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C49AD6F7B5165615B5413E94 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DEAD9881B8ACBD5F0D19E553 /* Pods_FreakingSimpleRoundImageView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreakingSimpleRoundImageView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E98D1DF51F76BBE000F30247 /* Boba.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Boba.jpeg; sourceTree = "<group>"; };
 		EED7D0807DCEA5A1E1AC2642 /* Pods_FreakingSimpleRoundImageView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreakingSimpleRoundImageView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 		607FACD21AFB9204008FA782 /* Example for FreakingSimpleRoundImageView */ = {
 			isa = PBXGroup;
 			children = (
+				E98D1DF51F76BBE000F30247 /* Boba.jpeg */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -251,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				E98D1DF61F76C2E500F30247 /* Boba.jpeg in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -525,7 +529,7 @@
 				INFOPLIST_FILE = FreakingSimpleRoundImageView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.planet-earth.FreakingSimpleRoundImageView-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.realbonus.FreakingSimpleRoundImageView-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -543,7 +547,7 @@
 				INFOPLIST_FILE = FreakingSimpleRoundImageView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.planet-earth.FreakingSimpleRoundImageView-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.realbonus.FreakingSimpleRoundImageView-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

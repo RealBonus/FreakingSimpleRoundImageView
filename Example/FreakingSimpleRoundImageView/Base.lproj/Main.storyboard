@@ -1,25 +1,120 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="FreakingSimpleRoundImageView_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boba.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="qLA-T1-VnE" customClass="RoundImageView" customModule="FreakingSimpleRoundImageView">
+                                <rect key="frame" x="32" y="37.5" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qLA-T1-VnE" secondAttribute="height" multiplier="1:1" id="Di2-Wc-Rf2"/>
+                                    <constraint firstAttribute="width" constant="300" id="y4k-Vy-41d"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.43137254899999999" green="0.76862745099999996" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image credit: starwars.com" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEe-ef-qZ7">
+                                <rect key="frame" x="340" y="157.5" width="317" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Bak-0k-kjj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Bak-0k-kjj"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Bak-0k-kjj"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EEe-ef-qZ7" firstAttribute="top" secondItem="qLA-T1-VnE" secondAttribute="bottom" constant="41" id="3NI-Z2-dO5"/>
+                            <constraint firstItem="qLA-T1-VnE" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="46y-lC-LEi"/>
+                            <constraint firstItem="qLA-T1-VnE" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="5CM-jn-ozu"/>
+                            <constraint firstItem="qLA-T1-VnE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="64" id="BzW-Wy-f41"/>
+                            <constraint firstItem="qLA-T1-VnE" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="32" id="Cgb-Ri-oi8"/>
+                            <constraint firstItem="EEe-ef-qZ7" firstAttribute="centerY" secondItem="qLA-T1-VnE" secondAttribute="centerY" id="Di3-ek-u2w"/>
+                            <constraint firstItem="qLA-T1-VnE" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Ihe-om-3bF"/>
+                            <constraint firstItem="EEe-ef-qZ7" firstAttribute="leading" secondItem="qLA-T1-VnE" secondAttribute="trailing" constant="8" id="P2U-8W-G1w"/>
+                            <constraint firstAttribute="trailing" secondItem="EEe-ef-qZ7" secondAttribute="trailing" constant="10" id="cBa-de-J3c"/>
+                            <constraint firstItem="EEe-ef-qZ7" firstAttribute="centerX" secondItem="qLA-T1-VnE" secondAttribute="centerX" id="go4-Ia-JEz"/>
+                            <constraint firstItem="qLA-T1-VnE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="32" id="utP-vH-wv1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5CM-jn-ozu"/>
+                                <exclude reference="BzW-Wy-f41"/>
+                                <exclude reference="Ihe-om-3bF"/>
+                                <exclude reference="utP-vH-wv1"/>
+                                <exclude reference="Di3-ek-u2w"/>
+                                <exclude reference="P2U-8W-G1w"/>
+                                <exclude reference="cBa-de-J3c"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="46y-lC-LEi"/>
+                                <include reference="5CM-jn-ozu"/>
+                                <include reference="BzW-Wy-f41"/>
+                                <exclude reference="Cgb-Ri-oi8"/>
+                                <exclude reference="3NI-Z2-dO5"/>
+                                <include reference="Di3-ek-u2w"/>
+                                <include reference="P2U-8W-G1w"/>
+                                <include reference="cBa-de-J3c"/>
+                                <exclude reference="go4-Ia-JEz"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="BzW-Wy-f41"/>
+                                <include reference="utP-vH-wv1"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="Cgb-Ri-oi8"/>
+                                <include reference="Ihe-om-3bF"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.5" y="31.875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Boba.jpeg" width="768" height="432"/>
+    </resources>
 </document>

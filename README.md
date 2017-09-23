@@ -27,3 +27,5 @@ realbonus, p.anokhov@gmail.com
 ## License
 
 FreakingSimpleRoundImageView is available under the MIT license. See the LICENSE file for more info.
+
+Image credits: [Starwars.com](http://www.starwars.com/databank/boba-fett)
