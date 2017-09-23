@@ -30,7 +30,8 @@ pod 'FreakingSimpleRoundImageView'
 2. Open Identity tab (cmd+shift+3). Set a RoundImageView class for it.
 3. Wait a second or two for "Designables: Up to date" line.
 4. Go on Attributes tab (cmd+shift+4), set a border width and border color
-5. Be happy.
+5. On Attributes tab, set 'Clip to bounds' flag.
+6. Be happy.
 
 ## Author
 
