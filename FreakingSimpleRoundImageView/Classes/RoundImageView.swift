@@ -9,9 +9,9 @@
 import UIKit
 
 @IBDesignable
-class RoundImageView: UIImageView {
+open class RoundImageView: UIImageView {
 	@IBInspectable
-	var borderWidth: CGFloat {
+	public var borderWidth: CGFloat {
 		set {
 			if newValue < 0 {
 				layer.borderWidth = 0
@@ -25,7 +25,7 @@ class RoundImageView: UIImageView {
 	}
 	
 	@IBInspectable
-	var borderColor: UIColor? {
+	open var borderColor: UIColor? {
 		set {
 			layer.borderColor = newValue?.cgColor
 		}
@@ -38,7 +38,7 @@ class RoundImageView: UIImageView {
 		}
 	}
 	
-	override var frame: CGRect {
+	override open var frame: CGRect {
 		didSet {
 			if frame.width < frame.height {
 				layer.cornerRadius = frame.width / 2
