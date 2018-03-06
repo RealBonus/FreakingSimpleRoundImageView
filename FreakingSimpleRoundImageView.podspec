@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FreakingSimpleRoundImageView'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'A freakin simple RoundImageView. With Interface Builder support.'
 
 # This description is used to generate tags and improve search results.
