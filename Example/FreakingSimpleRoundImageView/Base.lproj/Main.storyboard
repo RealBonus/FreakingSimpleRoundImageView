@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="landscape">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,16 +15,12 @@
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="FreakingSimpleRoundImageView_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boba.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="qLA-T1-VnE" customClass="RoundImageView" customModule="FreakingSimpleRoundImageView">
-                                <rect key="frame" x="32" y="37.5" width="300" height="300"/>
+                                <rect key="frame" x="37.5" y="52" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qLA-T1-VnE" secondAttribute="height" multiplier="1:1" id="Di2-Wc-Rf2"/>
                                     <constraint firstAttribute="width" constant="300" id="y4k-Vy-41d"/>
@@ -37,11 +34,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image credit: starwars.com" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEe-ef-qZ7">
-                                <rect key="frame" x="340" y="157.5" width="317" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEe-ef-qZ7">
+                                <rect key="frame" x="84" y="393" width="207" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Bak-0k-kjj"/>
                                 </constraints>
+                                <string key="text">Image credit: starwars.com
+Tap image for more!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -60,17 +59,18 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="EEe-ef-qZ7" firstAttribute="top" secondItem="qLA-T1-VnE" secondAttribute="bottom" constant="41" id="3NI-Z2-dO5"/>
-                            <constraint firstItem="qLA-T1-VnE" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="46y-lC-LEi"/>
+                            <constraint firstItem="qLA-T1-VnE" firstAttribute="centerX" secondItem="GvL-2a-UeU" secondAttribute="centerX" id="46y-lC-LEi"/>
                             <constraint firstItem="qLA-T1-VnE" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="5CM-jn-ozu"/>
-                            <constraint firstItem="qLA-T1-VnE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="64" id="BzW-Wy-f41"/>
-                            <constraint firstItem="qLA-T1-VnE" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="32" id="Cgb-Ri-oi8"/>
+                            <constraint firstItem="qLA-T1-VnE" firstAttribute="leading" secondItem="GvL-2a-UeU" secondAttribute="leading" constant="64" id="BzW-Wy-f41"/>
+                            <constraint firstItem="qLA-T1-VnE" firstAttribute="top" secondItem="GvL-2a-UeU" secondAttribute="top" constant="32" id="Cgb-Ri-oi8"/>
                             <constraint firstItem="EEe-ef-qZ7" firstAttribute="centerY" secondItem="qLA-T1-VnE" secondAttribute="centerY" id="Di3-ek-u2w"/>
                             <constraint firstItem="qLA-T1-VnE" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Ihe-om-3bF"/>
                             <constraint firstItem="EEe-ef-qZ7" firstAttribute="leading" secondItem="qLA-T1-VnE" secondAttribute="trailing" constant="8" id="P2U-8W-G1w"/>
-                            <constraint firstAttribute="trailing" secondItem="EEe-ef-qZ7" secondAttribute="trailing" constant="10" id="cBa-de-J3c"/>
+                            <constraint firstItem="GvL-2a-UeU" firstAttribute="trailing" secondItem="EEe-ef-qZ7" secondAttribute="trailing" constant="10" id="cBa-de-J3c"/>
                             <constraint firstItem="EEe-ef-qZ7" firstAttribute="centerX" secondItem="qLA-T1-VnE" secondAttribute="centerX" id="go4-Ia-JEz"/>
-                            <constraint firstItem="qLA-T1-VnE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="32" id="utP-vH-wv1"/>
+                            <constraint firstItem="qLA-T1-VnE" firstAttribute="leading" secondItem="GvL-2a-UeU" secondAttribute="leading" constant="32" id="utP-vH-wv1"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="GvL-2a-UeU"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="5CM-jn-ozu"/>
@@ -108,6 +108,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="qLA-T1-VnE" id="hTY-oV-ANF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
