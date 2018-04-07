@@ -11,6 +11,8 @@ import UIKit
 @IBDesignable
 open class RoundImageView: UIImageView {
 	
+	// MARK: Border properties
+	
 	@IBInspectable
 	open var borderWidth: CGFloat {
 		set {
@@ -39,23 +41,45 @@ open class RoundImageView: UIImageView {
 		}
 	}
 	
+	
+	// MARK: Rounding mode
+	
+	open var roundingMode: RoundingMode = .round {
+		didSet {
+			updateLayer()
+			setNeedsDisplay()
+		}
+	}
+	
+	
+	// MARK: Internal
+	
 	override open var frame: CGRect {
 		didSet {
-			if frame.width < frame.height {
-				layer.cornerRadius = frame.width / 2
-			} else {
-				layer.cornerRadius = frame.height / 2
-			}
+			updateLayer()
 		}
 	}
 	
 	override open var bounds: CGRect {
 		didSet {
+			updateLayer()
+		}
+	}
+	
+	private func updateLayer() {
+		switch roundingMode {
+		case .rectangle:
+			layer.cornerRadius = 0
+			
+		case .round:
 			if bounds.width < bounds.height {
 				layer.cornerRadius = bounds.width / 2
 			} else {
 				layer.cornerRadius = bounds.height / 2
 			}
+			
+		case .roundedCorners(let radius):
+			layer.cornerRadius = radius
 		}
 	}
 }
