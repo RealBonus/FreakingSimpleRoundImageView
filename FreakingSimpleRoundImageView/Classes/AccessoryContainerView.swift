@@ -101,6 +101,7 @@ open class AccessoryContainerView: UIView {
 			label.text = text
 			label.layer.borderColor = accessoriesBorderColor?.cgColor
 			label.layer.borderWidth = accessoriesBorderWidth
+			label.textInsets = accessoriesContentInsets
 			
 			view = label
 		}
