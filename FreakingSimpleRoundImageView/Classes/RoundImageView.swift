@@ -51,6 +51,10 @@ open class RoundImageView: UIImageView {
 		}
 	}
 	
+	// MARK: Accessory views
+	
+	
+	
 	
 	// MARK: Internal
 	

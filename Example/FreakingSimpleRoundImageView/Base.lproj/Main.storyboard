@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,21 +19,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boba.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="qLA-T1-VnE" customClass="RoundImageView" customModule="FreakingSimpleRoundImageView">
-                                <rect key="frame" x="37.5" y="52" width="300" height="300"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xPu-T8-Syt" customClass="AccessoryContainerView" customModule="FreakingSimpleRoundImageView">
+                                <rect key="frame" x="37" y="52" width="300" height="300"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boba.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="qLA-T1-VnE" customClass="RoundImageView" customModule="FreakingSimpleRoundImageView">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.43137254899999999" green="0.76862745099999996" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="qLA-T1-VnE" secondAttribute="height" multiplier="1:1" id="Di2-Wc-Rf2"/>
-                                    <constraint firstAttribute="width" constant="300" id="y4k-Vy-41d"/>
+                                    <constraint firstItem="qLA-T1-VnE" firstAttribute="leading" secondItem="xPu-T8-Syt" secondAttribute="leading" id="Bhc-8F-kFR"/>
+                                    <constraint firstAttribute="width" constant="300" id="EQJ-Lg-TPd"/>
+                                    <constraint firstAttribute="bottom" secondItem="qLA-T1-VnE" secondAttribute="bottom" id="OAa-PG-C2Q"/>
+                                    <constraint firstItem="qLA-T1-VnE" firstAttribute="top" secondItem="xPu-T8-Syt" secondAttribute="top" id="VQO-Ll-mHG"/>
+                                    <constraint firstAttribute="width" secondItem="xPu-T8-Syt" secondAttribute="height" multiplier="1:1" id="ib6-Ia-tAd"/>
+                                    <constraint firstAttribute="trailing" secondItem="qLA-T1-VnE" secondAttribute="trailing" id="tH4-XD-fwk"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.43137254899999999" green="0.76862745099999996" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEe-ef-qZ7">
                                 <rect key="frame" x="84" y="393" width="207" height="41"/>
                                 <constraints>
@@ -58,63 +68,32 @@ Tap image for more!</string>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="EEe-ef-qZ7" firstAttribute="top" secondItem="qLA-T1-VnE" secondAttribute="bottom" constant="41" id="3NI-Z2-dO5"/>
-                            <constraint firstItem="qLA-T1-VnE" firstAttribute="centerX" secondItem="GvL-2a-UeU" secondAttribute="centerX" id="46y-lC-LEi"/>
-                            <constraint firstItem="qLA-T1-VnE" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="5CM-jn-ozu"/>
-                            <constraint firstItem="qLA-T1-VnE" firstAttribute="leading" secondItem="GvL-2a-UeU" secondAttribute="leading" constant="64" id="BzW-Wy-f41"/>
-                            <constraint firstItem="qLA-T1-VnE" firstAttribute="top" secondItem="GvL-2a-UeU" secondAttribute="top" constant="32" id="Cgb-Ri-oi8"/>
-                            <constraint firstItem="EEe-ef-qZ7" firstAttribute="centerY" secondItem="qLA-T1-VnE" secondAttribute="centerY" id="Di3-ek-u2w"/>
-                            <constraint firstItem="qLA-T1-VnE" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Ihe-om-3bF"/>
-                            <constraint firstItem="EEe-ef-qZ7" firstAttribute="leading" secondItem="qLA-T1-VnE" secondAttribute="trailing" constant="8" id="P2U-8W-G1w"/>
+                            <constraint firstItem="xPu-T8-Syt" firstAttribute="top" secondItem="GvL-2a-UeU" secondAttribute="top" constant="32" id="1uk-Na-v6k"/>
+                            <constraint firstItem="xPu-T8-Syt" firstAttribute="centerX" secondItem="GvL-2a-UeU" secondAttribute="centerX" id="PFb-gc-fHC"/>
                             <constraint firstItem="GvL-2a-UeU" firstAttribute="trailing" secondItem="EEe-ef-qZ7" secondAttribute="trailing" constant="10" id="cBa-de-J3c"/>
-                            <constraint firstItem="EEe-ef-qZ7" firstAttribute="centerX" secondItem="qLA-T1-VnE" secondAttribute="centerX" id="go4-Ia-JEz"/>
-                            <constraint firstItem="qLA-T1-VnE" firstAttribute="leading" secondItem="GvL-2a-UeU" secondAttribute="leading" constant="32" id="utP-vH-wv1"/>
+                            <constraint firstItem="EEe-ef-qZ7" firstAttribute="top" secondItem="xPu-T8-Syt" secondAttribute="bottom" constant="41" id="g4L-Mu-FoC"/>
+                            <constraint firstItem="EEe-ef-qZ7" firstAttribute="centerX" secondItem="xPu-T8-Syt" secondAttribute="centerX" id="xpg-e2-kat"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GvL-2a-UeU"/>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="5CM-jn-ozu"/>
-                                <exclude reference="BzW-Wy-f41"/>
-                                <exclude reference="Ihe-om-3bF"/>
-                                <exclude reference="utP-vH-wv1"/>
-                                <exclude reference="Di3-ek-u2w"/>
-                                <exclude reference="P2U-8W-G1w"/>
                                 <exclude reference="cBa-de-J3c"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
-                                <exclude reference="46y-lC-LEi"/>
-                                <include reference="5CM-jn-ozu"/>
-                                <include reference="BzW-Wy-f41"/>
-                                <exclude reference="Cgb-Ri-oi8"/>
-                                <exclude reference="3NI-Z2-dO5"/>
-                                <include reference="Di3-ek-u2w"/>
-                                <include reference="P2U-8W-G1w"/>
                                 <include reference="cBa-de-J3c"/>
-                                <exclude reference="go4-Ia-JEz"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=compact">
-                            <mask key="constraints">
-                                <exclude reference="BzW-Wy-f41"/>
-                                <include reference="utP-vH-wv1"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=regular">
-                            <mask key="constraints">
-                                <exclude reference="Cgb-Ri-oi8"/>
-                                <include reference="Ihe-om-3bF"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="accessoryView" destination="xPu-T8-Syt" id="PAb-bb-AA1"/>
                         <outlet property="imageView" destination="qLA-T1-VnE" id="hTY-oV-ANF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.5" y="31.875"/>
+            <point key="canvasLocation" x="31.199999999999999" y="31.03448275862069"/>
         </scene>
     </scenes>
     <resources>
