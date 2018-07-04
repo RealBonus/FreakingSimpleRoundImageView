@@ -35,16 +35,17 @@ class ViewController: UIViewController {
 		imageView.isUserInteractionEnabled = true
 		imageView.addGestureRecognizer(recognizer)
 		
-		accessoryView.setAccessory(AccessoryType.label(text: "Top right!"), at: AccessoryPosition.topRight)
-		accessoryView.setAccessory(AccessoryType.label(text: "1"), at: AccessoryPosition.bottomRight)
-		accessoryView.setAccessory(AccessoryType.label(text: "Yay!"), at: AccessoryPosition.topLeft)
-		accessoryView.setAccessory(AccessoryType.label(text: "Read books"), at: AccessoryPosition.bottomLeft)
 		accessoryView.accessoriesBorderWidth = 3
 		accessoryView.accessoriesBorderColor = UIColor.white
 		accessoryView.accessoriesBackgroundColor = imageView.borderColor
 		accessoryView.accessoriesFont = UIFont.systemFont(ofSize: 20)
 		accessoryView.accessoriesContentInsets = UIEdgeInsets(top: 7, left: 15, bottom: 7, right: 15)
 		accessoryView.accessoriesContainerInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+		
+		accessoryView.setAccessory(AccessoryType.label(text: "Top right!"), at: AccessoryPosition.topRight)
+		accessoryView.setAccessory(AccessoryType.label(text: "1"), at: AccessoryPosition.bottomRight)
+		accessoryView.setAccessory(AccessoryType.label(text: "Yay!"), at: AccessoryPosition.topLeft)
+		accessoryView.setAccessory(AccessoryType.label(text: "Read books"), at: AccessoryPosition.bottomLeft)
 	}
 	
 	

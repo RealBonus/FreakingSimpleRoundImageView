@@ -31,6 +31,8 @@ class RoundedLabel: UILabel {
 		}
 	}
 	
+	private var drawRect: CGRect?
+	
 	override func textRect(forBounds bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
 		let insetRect = UIEdgeInsetsInsetRect(bounds, textInsets)
 		let textRect = super.textRect(forBounds: insetRect, limitedToNumberOfLines: numberOfLines)
@@ -38,11 +40,25 @@ class RoundedLabel: UILabel {
 										  left: -textInsets.left,
 										  bottom: -textInsets.bottom,
 										  right: -textInsets.right)
-		return UIEdgeInsetsInsetRect(textRect, invertedInsets)
+		
+		let newRect = UIEdgeInsetsInsetRect(textRect, invertedInsets)
+		
+		if newRect.height > newRect.width {
+			let delta = (newRect.height - newRect.width) / 2
+			drawRect = CGRect(x: newRect.origin.x + delta, y: newRect.origin.y, width: newRect.width, height: newRect.height)
+			return CGRect(x: newRect.origin.x, y: newRect.origin.y, width: newRect.height, height: newRect.height)
+		} else {
+			drawRect = nil
+			return newRect
+		}
 	}
 	
 	override func drawText(in rect: CGRect) {
-		super.drawText(in: UIEdgeInsetsInsetRect(rect, textInsets))
+		if let drawRect = drawRect {
+			super.drawText(in: UIEdgeInsetsInsetRect(drawRect, textInsets))
+		} else {
+			super.drawText(in: UIEdgeInsetsInsetRect(rect, textInsets))
+		}
 	}
 	
 	
