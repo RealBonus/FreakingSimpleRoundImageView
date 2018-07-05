@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RoundedLabel: UILabel {
+open class RoundedLabel: UILabel {
 	// MARK: Frame
 	
 	override open var frame: CGRect {
@@ -33,7 +33,7 @@ class RoundedLabel: UILabel {
 	
 	private var drawRect: CGRect?
 	
-	override func textRect(forBounds bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
+	override open func textRect(forBounds bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
 		let insetRect = UIEdgeInsetsInsetRect(bounds, textInsets)
 		let textRect = super.textRect(forBounds: insetRect, limitedToNumberOfLines: numberOfLines)
 		let invertedInsets = UIEdgeInsets(top: -textInsets.top,
@@ -53,7 +53,7 @@ class RoundedLabel: UILabel {
 		}
 	}
 	
-	override func drawText(in rect: CGRect) {
+	override open func drawText(in rect: CGRect) {
 		if let drawRect = drawRect {
 			super.drawText(in: UIEdgeInsetsInsetRect(drawRect, textInsets))
 		} else {
