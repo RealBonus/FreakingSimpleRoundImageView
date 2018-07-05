@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FreakingSimpleRoundImageView'
-  s.version          = '1.2.1'
+  s.version          = '1.2.2'
   s.summary          = 'A freakin simple RoundImageView. With Interface Builder support.'
 
   s.description      = 'Very simple RoundImageView, with Interface Builder support. In swift. Grab it and make something neat.'
