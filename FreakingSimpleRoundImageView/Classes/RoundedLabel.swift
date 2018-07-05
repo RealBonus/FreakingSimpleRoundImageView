@@ -25,7 +25,7 @@ open class RoundedLabel: UILabel {
 	// MARK: Edge insets
 	// Thanks to https://spin.atomicobject.com/2017/08/04/swift-extending-uilabel/
 	
-	var textInsets = UIEdgeInsets.zero {
+	open var textInsets = UIEdgeInsets.zero {
 		didSet {
 			invalidateIntrinsicContentSize()
 		}
