@@ -8,6 +8,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/FreakingSimpleRoundImageView.svg?style=flat)](http://cocoapods.org/pods/FreakingSimpleRoundImageView)
 
 Really, really simple round ImageView in Swift, with Interface Builder support.
+Version 1.3 migrated to Swift 4.2
 
 ![Attributes inspector](https://raw.githubusercontent.com/RealBonus/FreakingSimpleRoundImageView/master/Screenshots/Attributes.png)
 
